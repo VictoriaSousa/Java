@@ -21,34 +21,32 @@ public class Collection1 { // Collection = LinkedList
 		c1.mostrar(list);
 	}
 	
-	public LinkedList<Integer> iniciar() {
-		LinkedList<Integer> lista = new LinkedList<Integer>();
-		return lista; 
+	public LinkedList<Integer> iniciar() { //função para iniciar a LinkedList, devolve um list que vai ser atribuida a um objeto no main
+		LinkedList<Integer> lista = new LinkedList<Integer>();	//instancia um objeto LinkedList 
+		return lista;	//retorna o LinkedList 
 	}
 	
-	public void inserir_inicio(LinkedList<Integer> list, int qntd) {
-		Random r = new Random();
-		while(qntd > 0) {
-			int number = Math.abs(r.nextInt()) % 11;
-			list.add(number);
-			qntd--;
+	public void inserir_inicio(LinkedList<Integer> list, int qntd) { //função que vai inserir objetos no inicio da LinkedList que foi passada como parametro, na quantidade que foi passada como parametro
+		Random r = new Random(); //instancia um objeto da classe Random
+		while(qntd-- > 0) {	//fica em laço enquanto a variavel qntd for maior que 0, depois da verificação decrementa a variavel
+			int number = Math.abs(r.nextInt()) % 11;	//atribui a number um inteiro aleatorio entre 0 e 10
+			list.addFirst(number); //adiciona no inico da List
 		}
 	}
 	
-	public void inserir_fim(LinkedList<Integer> lista, int qntd) {
-		Random r = new Random();
-		while(qntd > 0) {
-			int number = Math.abs(r.nextInt()) % 11;
-			lista.addLast(number);
-			qntd--;
+	public void inserir_fim(LinkedList<Integer> lista, int qntd) { //função que vai inserir objetos no inicio da LinkedList que foi passada como parametro, na quantidadeque foi passada como parametro
+		Random r = new Random();	//instancia um objeto da classe Random
+		while(qntd-- > 0) {	//fica em laço enquanto a variavel qntd for maior que 0, depois da verificação decrementa a variavel
+			int number = Math.abs(r.nextInt()) % 11;	//atribui a number um inteiro aleatorio entre 0 e 10
+			lista.addLast(number);	//insere no final da List
 		}
 	}	
 	
-	public void remover(LinkedList<Integer> lista, int index) {
-		lista.remove(index);
+	public void remover(LinkedList<Integer> lista, int index) {	//função vai remover da List o elemento com o indice que foi passado como parametro
+		lista.remove(index);	//remove o elemento com o indice passado como parametro
 	}
 	
-	public void mostrar(LinkedList<Integer> lista) {
-		System.out.println(lista);
+	public void mostrar(LinkedList<Integer> lista) {	//função para mostrar a List
+		System.out.println(lista);	//imprime no console a List
 	}
 }
